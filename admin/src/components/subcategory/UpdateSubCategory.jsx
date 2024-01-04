@@ -55,10 +55,7 @@ function MyVerticallyCenteredModal(props) {
                 'content-type': 'multipart/form-data',
             },
         }
-        // console.log(subCatId)
-        // console.log(catId)
-        // console.log(subCatName)
-        // console.log(subImg)
+        
         let response = await axios.post(`http://localhost:3900/api/admin/addSubCat?sub_categoryid=${empid}&sub_categoryname=${empname}&category_id=${password}`,
             formdata, config).then((response) => {
                 // console.log(error)
