@@ -76,6 +76,15 @@ function MyVerticallyCenteredModal(props) {
         // form.append('subimg',file)
     }
 
+    function handlefileforgit(e) {
+        const file = e.target.files[0]
+        console.log(file);
+
+        setSubImg(file);
+
+        // form.append('subimg',file)
+    }
+
     return (
         <Modal
             {...props}
