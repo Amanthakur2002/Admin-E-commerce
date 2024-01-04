@@ -1,0 +1,7 @@
+/* Custom modal size */
+.custom-modal-size {
+    max-width: 60%;
+    /* Adjust this value to your desired width */
+    margin: 1.75rem auto;
+    /* Center the modal on the page */
+}

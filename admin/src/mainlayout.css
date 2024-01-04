@@ -1,0 +1,82 @@
+/* this is for appi comp wich is taken from admin pre (sidebar) */
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .sideContent{
+    /* background-color: antiquewhite; */
+    height: 100%;
+    background-color: rgb(225, 0, 0);
+  }
+  label:hover{
+    background-color:blueviolet;
+  }
+  .logo{
+    height: 80px;
+    width:80px;
+    margin: 0px;
+    /* background-color: white; */
+    border-radius: 100%;
+    top:0px;
+  }
+  header{
+    width: 100%;
+    height: 90px;
+    padding-top: 10px;
+    /* padding-left: 1350px; */
+    background-color: cyan;
+    display: flex;
+    flex-direction: row;
+  }
+  header>h6{
+    margin-top: 0px;
+    margin-left: 1300px;
+  }
+  footer{
+    padding-bottom: 0px;
+    padding-top: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(88, 85, 85);
+  }
+  .menu>label{
+    font-size: '20px';
+  }
+  .sidebar{
+    margin-top: 100px;
+    /* background-color: red; */
+  }

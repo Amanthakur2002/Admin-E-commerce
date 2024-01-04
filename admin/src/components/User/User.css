@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #000000; */
+}
+
+html , body {
+  height: 100%;
+  width: 100%;
+}
+
+/* .container{
+  margin: 5rem;
+} */
+
+.center{
+  /* margin-left: 30px; */
+}
+/* table ,th ,td{
+  border: 1px solid black;
+} */
+.usersBox{
+  /* height: 70vh; */
+  /* width: 100vh; */
+  /* margin-left: 200px; */
+  /* margin-top: 100px; */
+  color: black;
+  /* background-color: rgba(3, 3, 3, 0.184); */
+  /* padding-right: 10px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* padding-top: 0px; */
+}
+.tables{
+  width: 84vw;
+  /* padding: 20px 0 0 50px; */
+}
+.addNew{
+  padding-top: 0px;
+  /* background-color:cyan; */
+}
+.modalWrapper{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  /* background-color: rgba(189,189,189,0.9); */
+}
+.modalBox{
+  position: fixed;
+  margin-top: -100px;
+  margin-left: -10px;
+  height: 70vh;
+  width: 110vh;
+  color: black;
+  /* background-color: rgb(237,205,236); */
+}
+.updateWrapper{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.updateBox{
+  position: fixed;
+  margin-top: -160px;
+  margin-left: -600px;
+  height: 75vh;
+  width: 110vh;
+  color: black;
+  background-color: rgb(237,205,236);
+ 
+}
+.update{
+  margin-left: 2px;
+}
+.modalButton{
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #212121;
+  color: white;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  transform: scale(0.9);
+}
+form{
+  margin: 50px;
+  padding: 20px;
+}
+label{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.update>label{
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+input{
+  width: 500px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.update>input{
+  
+    width: 50px;
+    height: 30px;
+   
+}
+.deleteButton{
+  padding: 0.6rem;
+  margin-right: 2px;
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  
+}
+.updateButton{
+  padding: 0.6rem;
+  margin-right: 2px;
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(45, 198, 229);
+  color: white;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  
+}
+
+
+
+/* for pagination component of user*/
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-header {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  /* background-color: #4caf50; */
+  background-color: #185BE7;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-info {
+  margin: 0 10px;
+}

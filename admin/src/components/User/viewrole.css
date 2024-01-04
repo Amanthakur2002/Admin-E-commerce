@@ -1,0 +1,53 @@
+/* Style the user info section */
+.user-info {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    /* Linear gradient background */
+    color: #fff;
+}
+
+.user-info h4 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-info p {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Style the roles section */
+.user-roles h4 {
+    font-weight: bold;
+    margin: 20px 0;
+    color: #007bff;
+}
+
+.user-roles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-roles li {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Style the revoke buttons */
+.revoke-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff5733;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.revoke-button:hover {
+    color: #ff0000;
+}

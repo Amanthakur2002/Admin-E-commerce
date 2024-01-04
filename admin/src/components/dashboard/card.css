@@ -1,0 +1,43 @@
+.admin-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    width: 250px;
+    height: 200px;
+    /* Set the fixed height to 200px */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-header h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.card-content {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+    /* Enable vertical scrolling for content */
+}
+
+.card-content p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.card-content strong {
+    font-weight: bold;
+}

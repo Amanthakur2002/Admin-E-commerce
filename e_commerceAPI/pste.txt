@@ -1,0 +1,118 @@
+const getProducts = async(req,res) =>{
+
+    let userData = req.body;
+    console.log(userData);
+     let sqlQuery ="select * from seller_shop";
+
+
+
+     await connection.query(sqlQuery,[userData],function(error,result) {
+        if(error){
+            console.log("error", error.sqlMessage);
+        }
+
+        else{
+            res.json(result);
+        }
+    }
+     )
+}
+
+// ====================================================
+//////Post
+
+const postEcom = async(req,res) =>{
+
+    let userData = [req.body.uid,req.body.password]
+    console.log(userData);
+    
+   
+     let sqlQuery =`insert into login(uid,password) values(?,?)`;
+
+
+     await connection.query(sqlQuery,userData,function(error,result) {
+        if(error){
+            console.log("error", error.sqlMessage);
+        }
+
+        else{
+            res.json(result);
+        }
+    }
+     )
+}
+
+
+
+///////Get
+
+const getEcom = async(req,res) =>{
+
+    let userData = req.body;
+    console.log(userData);
+     let sqlQuery ="SELECT * FROM login";
+
+
+
+     await connection.query(sqlQuery,[userData],function(error,result) {
+        if(error){
+            console.log("error", error.sqlMessage);
+        }
+
+        else{
+            res.json(result);
+        }
+    }
+     )
+}
+
+/////////Update
+
+const updateEcom = async(req,res) =>{
+        // let userData = [req.query.uid,req.body.password]
+        // let userData1 = req.params.uid;
+        let uid=req.query.uid
+        let password=req.body.password
+
+    // console.log(userData);
+     let sqlQuery = `UPDATE login SET password=? WHERE uid = ?`;
+
+
+
+     await connection.query(sqlQuery,[password,uid],function(error,result) {
+        if(error){
+            console.log("error", error.sqlMessage);
+        }
+
+        else{
+            res.json(result);
+        }
+    })
+}
+
+
+
+//////Delete
+
+const deleteEcom = async (req,res) =>{
+
+    // let userData = req.body 
+    let userData1 = req.query.uid
+    console.log(userData1);
+     let sqlQuery ="DELETE FROM login WHERE uid=? ";
+
+
+
+
+     await connection.query(sqlQuery,[userData1],function(error,result) {
+        if(error){
+            console.log("error", error.sqlMessage);
+        }
+
+        else{
+            res.json(result);
+        }
+    }
+     )
+
+}
