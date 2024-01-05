@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 import { Dialog, Flex, TextField, Text } from '@radix-ui/themes'
 // import styles from "./Subcategory.module.css"
 import AddSubCategory from "./AddSubCategory"
-import UpdateCategory from "./UpdateSubCategory"
+import UpdateSubCategory from "./UpdateSubCategory"
 
 const Subcategory = () => {
     const [records, setRecords] = useState([]);
@@ -55,7 +55,7 @@ const Subcategory = () => {
         {
             name: 'Action', selector: (row) => 
             // <button className="edit-button">edit </button>
-                <UpdateCategory id={row.id} catId={row.category_id} />
+                <UpdateSubCategory id={row.sub_categoryid} catId={row.category_id} subcatname={row.sub_categoryname} />
 
         }
 

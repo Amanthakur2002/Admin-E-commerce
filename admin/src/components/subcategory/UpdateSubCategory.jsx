@@ -12,7 +12,9 @@ import "../../assets/editbutton.css"
 
 function MyVerticallyCenteredModal(props) {
     const [sst, setSst] = useState(0)  //State to check response.data.affetctedRows //
-    const [empData, setEmpData] = useState([])
+    const [empData, setEmpData] = useState(props.catId)
+    const [empDataSub, setEmpDataSub] = useState(props.id)
+    const [subCatName, setSubCatName] = useState(props.subcatname)
     /////////Below 4 states are for add new data//////////////
     const [empid, setEmpId] = useState("")
     const [empname, setEmpName] = useState("")
@@ -22,7 +24,7 @@ function MyVerticallyCenteredModal(props) {
     //////////////////////GET CATEGORY ID/////////////////////////
     const [category, setCategory] = useState([])
 
-    const getCategory = async () => {
+    const getCategory = async ({ id, catId }) => {
         let response = await axios.get('http://localhost:3900/api/admin/categorylist')
         console.log(response)
         setCategory(response.data)
@@ -76,14 +78,6 @@ function MyVerticallyCenteredModal(props) {
         // form.append('subimg',file)
     }
 
-    function handlefileforgit(e) {
-        const file = e.target.files[0]
-        console.log(file);
-
-        setSubImg(file);
-
-        // form.append('subimg',file)
-    }
 
     return (
         <Modal
@@ -104,35 +98,19 @@ function MyVerticallyCenteredModal(props) {
                         <h3 style={{ textAlign: 'center' }}><b>Edit Subcategory</b></h3>
                         
                         <Form.Group className="mb-1" controlId="formBasicEmail">
-
-                            <Form.Label>Choose a Category ID :</Form.Label>
-                            <Form.Select id="category"
-                                value={password}
-                                defaultValue={"Choose Category"}
-                                onChange={(e) => setPass(e.target.value)}
-                            >
-                                {
-                                    category.map((item, index) => {
-                                        return (
-                                            <option key={index}>
-                                                <option value={item.category_id}
-                                                >{item.category_id}
-                                                </option>
-                                            </option>
-                                        )
-                                    })
-                                }
-                            </Form.Select>
+                            <Form.Label>Category ID :</Form.Label>
+                            <Form.Control value={empData} disabled
+                                onChange={(e) => setPass(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-1" controlId="formBasicPassword">
                             <Form.Label>Subcategory ID</Form.Label>
-                            <Form.Control value={empid} onChange={(e) => setEmpId(e.target.value)} />
+                            <Form.Control value={empDataSub} disabled onChange={(e) => setEmpId(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-1" controlId="formBasicPassword">
                             <Form.Label>Subcategory Name</Form.Label>
-                            <Form.Control value={empname} onChange={(e) => setEmpName(e.target.value)} />
+                            <Form.Control defaultValue={props.subcatname} onChange={(e) => setEmpName(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-1" controlId="formBasicPassword">
@@ -154,7 +132,7 @@ function MyVerticallyCenteredModal(props) {
     );
 }
 
-function AddSubCategory() {
+function UpdateSubCategory(props) {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
@@ -167,9 +145,12 @@ function AddSubCategory() {
             <MyVerticallyCenteredModal
                 show={modalShow}
                 onHide={() => setModalShow(false)}
+                id={props.id}
+                catId={props.catId}
+                subcatname={props.subcatname}
             />
         </>
     );
 }
 
-export default AddSubCategory;
+export default UpdateSubCategory;

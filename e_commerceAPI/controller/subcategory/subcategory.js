@@ -70,9 +70,12 @@ console.log("data", data)
   
   const updatesubcategory = async(req,res)=>{
     let id = req.query.subcategory_id;
-    let data2 = req.body;
+    // let data2 = req.body;
+
+    const data = [req.query.sub_categoryid, req.query.sub_categoryname, sub_categoryimg, req.query.category_id]
+
     let sqlquery=`UPDATE sub_category SET ? WHERE subcategory_id=?`;
-    await connection.query(sqlquery,[data2,id],function(error,result){
+    await connection.query(sqlquery,[data],function(error,result){
       if(error){
         console.log(error)
       }
